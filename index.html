@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SCADAcar</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>	
+	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/bluetooth.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.localStorage.setItem("key", "value");
+        var keyname = window.localStorage.key(i);
+        // keyname is now equal to "key"
+        var value = window.localStorage.getItem("key");
+        // value is now equal to "value"
+        window.localStorage.removeItem("key");
+        window.localStorage.setItem("key2", "value2");
+        window.localStorage.clear();
+        // localStorage is now empty
+    }
+
+    </script>
+  </head>
+  <body>
+    	<div data-role="page" data-theme="a" id="main_menu">
+		<header data-role="header" data-id="header" data-position="fixed">
+			<h1>SCADAcar v0.0.1</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#add_customer" data-transition="none" class="ui-btn-active ui-state-persist">Cliente</a></li>
+						<li><a href="#new_order" data-transition="none" class="ui-disabled">Renglones</a></li>
+					</ul>
+				</div>
+		</header>
+
+		<div role="main" class="ui-content">
+			<div id="connection">
+				<div style="margin: 20px">
+				    Dispositivo: <br/>
+				    <select id="deviceList">
+				        <option>Buscando dispositivos...</option>
+				    </select>       
+				</div>
+				<p>
+				    <a class="topcoat-button--large is-disabled" id="connectButton">Conectar</a>
+				</p>
+				<p>
+				    <a class="topcoat-button--large" id="listButton">Lista de Dispositivos</a>
+				</p>
+			    </div>
+		
+			    <div id="chat">
+				<form id="chatform">
+				    <textarea id="messages" readonly></textarea>
+				</form>
+				<div class="center">
+				    <a class="topcoat-button" id="disconnectButton">Desconectar</a>                
+				</div>
+			</div>
+		</div>
+		<footer data-role="footer"><h4>Footer</h4></footer>
+	</div>
+  </body>
+</html>
