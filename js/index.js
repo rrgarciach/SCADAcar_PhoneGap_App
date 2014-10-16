@@ -188,23 +188,9 @@ var app = {
         app.setStatus("Disconnected");
     },
     onmessage: function(message) {
-        //messages.value += "Them: " + message;
-        var command = message.substring(0, 5);
-        var value = message.substring(5);
-        switch (command)
-        {
-            case "temp=":
-                value = parseFloat(value);
-                value = value / 100;
-                messages.value = "Temperatura: " + value.toPrecision(4) + "º C";
-                break;
-            case "humi=":
-                value = parseInt(value);
-                messages.value = "Humedad: " + value + " \%";
-                break;
-        }
-        /*messages.value = "Them: " + message;
-         messages.scrollTop = messages.scrollHeight;*/
+        messages.value += "Them: " + message;
+        messages.value = "Them: " + message;
+         messages.scrollTop = messages.scrollHeight;
     },
     setStatus: function(message) { // setStatus
         console.log(message);
