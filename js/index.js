@@ -33,10 +33,10 @@ var app = {
         // wire buttons to functions        
         connectButton.ontouchstart = app.connect;
         listButton.ontouchstart = app.list;
-
+/*
         getTemperatureButton.ontouchstart = app.getTemperature;
         //temperatureform.onsubmit = app.getTemperature;
-/*
+
         getHumidityButton.ontouchstart = app.getHumidity;
         //humidityform.onsubmit = app.getHumidity;    
 
