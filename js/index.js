@@ -16,7 +16,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-var bluetoothSerial = cordova.require('bluetoothSerialLibrary');
+var bluetoothSerial = cordova.require('bluetoothSerial');
 
 var app = {
     initialize: function() {
@@ -36,7 +36,7 @@ var app = {
 
         getTemperatureButton.ontouchstart = app.getTemperature;
         //temperatureform.onsubmit = app.getTemperature;
-
+/*
         getHumidityButton.ontouchstart = app.getHumidity;
         //humidityform.onsubmit = app.getHumidity;    
 
@@ -45,7 +45,7 @@ var app = {
 
         hatchCloseButton.ontouchstart = app.hatchClose;
         //windowcloseform.onsubmit = app.windowClose;
-
+*/
         disconnectButton.ontouchstart = app.disconnect;
 
         // listen for messages
