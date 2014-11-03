@@ -61,7 +61,7 @@ var app = {
     },
     connect: function() {
         var device = deviceList[deviceList.selectedIndex].value;
-        alert(device);
+        //alert(deviceList[deviceList.selectedIndex].value);
         app.disable(connectButton);
         app.setStatus("Connecting...");
         console.log("Requesting connection to " + device);
@@ -187,11 +187,21 @@ var app = {
         chat.style.display = "none";
         app.setStatus("Disconnected");
     },
-    count: 0,
+    lineCount: 0,
+    lineNumber: function (num, size) {
+        var s = '00000' + num;
+        return s.substr(s.length - size);
+    },
     onmessage: function(message) {
-        messages.value += ++count + ' ' + message;
+        messages.value += app.lineNumber(++app.lineCount ,6)+': ' + message;
         // messages.value += "ms: " + message;
          messages.scrollTop = messages.scrollHeight;
+         var data = {log: message};
+         $.ajax({
+          type: "POST",
+          url: "http://masrenovable.com/saveLog.php",
+          data: data
+        });
     },
     setStatus: function(message) { // setStatus
         console.log(message);
