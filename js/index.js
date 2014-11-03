@@ -188,8 +188,8 @@ var app = {
         app.setStatus("Disconnected");
     },
     onmessage: function(message) {
-        messages.value += "Them: " + message;
-        messages.value = "Them: " + message;
+        messages.value += "ms: " + message;
+        messages.value = "ms: " + message;
          messages.scrollTop = messages.scrollHeight;
     },
     setStatus: function(message) { // setStatus
