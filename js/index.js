@@ -187,8 +187,9 @@ var app = {
         chat.style.display = "none";
         app.setStatus("Disconnected");
     },
+    count: 0,
     onmessage: function(message) {
-        messages.value += message;
+        messages.value += ++count + ' ' + message;
         // messages.value += "ms: " + message;
          messages.scrollTop = messages.scrollHeight;
     },
