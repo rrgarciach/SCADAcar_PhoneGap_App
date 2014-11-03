@@ -39,52 +39,52 @@
 		*/
 		</script>
 	</head>
-		<body>
-			<div class="topcoat-navigation-bar">
-		        <div class="topcoat-navigation-bar__item left quarter">
-		            <a class="topcoat-icon-button--quiet">
-		              <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-		            </a>
-		        </div>
-		        <div class="topcoat-navigation-bar__item center half">
-		            <h1 class="topcoat-navigation-bar__title">SCADAcar v0.1</h1>
-		        </div>
-		        <div class="topcoat-navigation-bar__item right quarter">
-		            <a class="topcoat-icon-button--quiet">
-		              <span class="topcoat-icon topcoat-icon--edit"></span>
-		            </a>
-		        </div>
-		    </div>
+	<body>
+		<div class="topcoat-navigation-bar">
+	        <div class="topcoat-navigation-bar__item left quarter">
+	            <a class="topcoat-icon-button--quiet">
+	              <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+	            </a>
+	        </div>
+	        <div class="topcoat-navigation-bar__item center half">
+	            <h1 class="topcoat-navigation-bar__title">SCADAcar v0.1</h1>
+	        </div>
+	        <div class="topcoat-navigation-bar__item right quarter">
+	            <a class="topcoat-icon-button--quiet">
+	              <span class="topcoat-icon topcoat-icon--edit"></span>
+	            </a>
+	        </div>
+	    </div>
 
-		    <div id="content">
-				<div id="connection">
-					<div style="margin: 20px">
-					    Dispositivo: <br/>
-					    <select id="deviceList">
-					        <option>Buscando dispositivos...</option>
-					    </select>       
-					</div>
-					<p>
-					    <a class="topcoat-button--large is-disabled" id="connectButton">Conectar</a>
-					</p>
-					<p>
-					    <a class="topcoat-button--large" id="listButton">Lista de Dispositivos</a>
-					</p>
-				    </div>
-			
-				    <div id="chat">
-					<form id="chatform">
-					    <textarea id="messages" readonly></textarea>
-					</form>
-					<div class="center">
-					    <a class="topcoat-button" id="disconnectButton">Desconectar</a>                
-					</div>
+	    <div id="content">
+			<div id="connection">
+				<div style="margin: 20px">
+				    Dispositivo: <br/>
+				    <select id="deviceList">
+				        <option>Buscando dispositivos...</option>
+				    </select>       
 				</div>
-			</div>	
+				<p>
+				    <a class="topcoat-button--large is-disabled" id="connectButton">Conectar</a>
+				</p>
+				<p>
+				    <a class="topcoat-button--large" id="listButton">Lista de Dispositivos</a>
+				</p>
+			    </div>
+		
+			    <div id="chat">
+				<form id="chatform">
+				    <textarea id="messages" readonly></textarea>
+				</form>
+				<div class="center">
+				    <a class="topcoat-button" id="disconnectButton">Desconectar</a>                
+				</div>
+			</div>
+		</div>	
 
-			<footer>
-		        <div id="statusMessage"></div>
-		    </footer>
+		<footer>
+	        <div id="statusMessage"></div>
+	    </footer>
 
 		<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 		<script type="text/javascript" charset="utf-8" src="js/bluetooth.js"></script>
