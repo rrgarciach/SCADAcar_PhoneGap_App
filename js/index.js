@@ -22,6 +22,7 @@ var app = {
     initialize: function() {
         this.bind();
         listButton.style.display = "none";
+        configurations.style.display = "none";
     },
     bind: function() {
         document.addEventListener('deviceready', this.deviceready, false);
@@ -33,6 +34,8 @@ var app = {
         // wire buttons to functions        
         connectButton.ontouchstart = app.connect;
         listButton.ontouchstart = app.list;
+
+        buttonConfigurations.ontouchstart = app.openConfiguration;
 /*
         getTemperatureButton.ontouchstart = app.getTemperature;
         //temperatureform.onsubmit = app.getTemperature;
@@ -232,5 +235,8 @@ var app = {
             app.setStatus(message + details);
         };
         return func;
+    },
+    openConfiguration: function() {
+        app.configurations.style.display = "block";
     }
 };
